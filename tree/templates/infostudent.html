@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Информация о студенте</h1>
+<ul>
+    <li>Имя студента: {{student.name}}</li>
+    <li>Возраст студента: {{student.age}}</li>
+    <li>Группа студента: {{student.group}}</li>
+</ul>
+
+{% for discipline, res in result.items %}
+    <h3>{{discipline}}</h3>
+        {% for date, mark in res.items %}
+            {{date}}: {{mark}}
+        {% endfor %}
+{% endfor %}
+</body>
+</html>
